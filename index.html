@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Cloud Cast</h1>
+            <input type="text" id="city-input" placeholder="Enter city name">
+            <button id="search-btn">Search</button>
+            <button id="location-btn">Use My Location</button>
+        </header>
+        <main>
+            <div class="weather-info">
+                <h2 id="location"></h2>
+                <div id="current-weather">
+                    <img id="weather-icon" src="" alt="Weather Icon">
+                    <h3 id="temperature"></h3>
+                    <p id="conditions"></p>
+                    <p>Wind Speed: <span id="wind-speed"></span> km/h</p>
+                    <p>Pressure: <span id="pressure"></span> hPa</p>
+                    <p>Humidity: <span id="humidity"></span>%</p>
+                    <p>Air Quality: <span id="air-quality"></span></p>
+                    <p>Sunrise: <span id="sunrise"></span></p>
+                    <p>Sunset: <span id="sunset"></span></p>
+                </div>
+                <section id="additional-details">
+                    <h4>Additional Weather Details</h4>
+                    <div class="details-grid">
+                        <div class="detail-item"><h5>Visibility</h5><p><span id="visibility"></span> km</p></div>
+                        <div class="detail-item"><h5>UV Index</h5><p><span id="uv-index"></span></p></div>
+                        <div class="detail-item"><h5>Feels Like</h5><p><span id="feels-like"></span>°</p></div>
+                        <div class="detail-item"><h5>Cloudiness</h5><p><span id="cloudiness"></span>%</p></div>
+                    </div>
+                </section>
+                <p class="last-updated">Last updated: <span id="last-updated-time"></span></p>
+                <p class="error-message" id="error-message">City not found. Please try again.</p>
+                <p class="loading" id="loading">Loading...</p>
+                <div class="spinner" id="spinner" style="display:none;"></div> <!-- Spinner element -->
+            </div>
+            <footer>
+                <p>Weather data provided by <a href="https://openweathermap.org/" target="_blank">OpenWeatherMap</a></p>
+            </footer>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
